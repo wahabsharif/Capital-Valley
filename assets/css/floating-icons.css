@@ -1,0 +1,26 @@
+.float-icons {
+  display: block;
+  z-index: 100;
+  margin-left: -5%;
+  position: fixed;
+  margin-top: 100px;
+  border: 1px solid #000; /* Add border to the .float-icons container */
+  border-radius: 20px;
+  background-color: #d7b24a;
+  transition: transform 0.3s ease-in-out; /* Add transition for smooth animation */
+}
+.float-icons:hover {
+  transform: translateX(30px); /* Slide 30px to the right on hover */
+  padding-left: 10px;
+}
+.float-icons a {
+  display: block;
+  margin: 10px;
+  transition: transform 0.3s ease-in-out;
+  float: none; /* Remove the float property to stack the icons vertically */
+  filter: grayscale(100%); /* Convert icons to black and white */
+}
+.float-icons a:hover {
+  transform: scale(2);
+  filter: grayscale(0%); /* Revert to original colors on hover */
+}
