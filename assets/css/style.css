@@ -8,6 +8,8 @@
     7. Hero section
     8. About us
     9. Save date 
+    10. Wedding details
+    11. RSVP
     12. Story
     13. Event details
     14. Gallery tabs images
@@ -421,17 +423,14 @@ header nav.navbar.navbar.fixed-top {
 
 /*=========================== Navbar ends ============================*/
 
-/*===========================  section starts ============================*/
+/*=========================== Hero section starts ============================*/
 
 .hero_section {
-  background-image: url(../images/hero-5.jpg);
+  background-image: url(../images/hero-1.jpg);
   background-position: center;
   background-size: cover;
   height: 100vh;
   background-repeat: no-repeat;
-
-  justify-content: center;
-  align-items: center;
 }
 
 .hero_area {
@@ -458,11 +457,71 @@ header nav.navbar.navbar.fixed-top {
   margin-bottom: 0;
 }
 
+.hero_image:before {
+  content: "";
+  background-image: url(../images/flowers_left.svg);
+  background-size: contain;
+  position: absolute;
+  width: 235px;
+  height: 238px;
+  background-repeat: no-repeat;
+  background-position: top left;
+  top: -50px;
+  left: -110px;
+}
+
+.hero_image:after {
+  content: "";
+  background-image: url(../images/flowers_right.svg);
+  background-size: contain;
+  position: absolute;
+  width: 235px;
+  height: 238px;
+  background-repeat: no-repeat;
+  background-position: top right;
+  bottom: -50px;
+  right: -140px;
+}
+
 .hero_image {
-  width: 100%;
-  height: auto;
-  display: block;
+  width: 400px;
   margin: auto;
+  height: 400px;
+  z-index: 2;
+}
+
+.hero_image img {
+  width: 100%;
+  object-fit: cover;
+  -webkit-clip-path: polygon(
+    25% 7%,
+    75% 7%,
+    100% 50%,
+    75% 95%,
+    25% 95%,
+    0% 50%
+  );
+  height: 100%;
+}
+
+.image-ring {
+  position: relative;
+  z-index: 9;
+  height: 100%;
+}
+
+.image-ring:after {
+  content: "";
+  background-image: url(../images/hero_image_border.png);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+  background-size: contain;
+  background-repeat: no-repeat;
+  top: 0;
+  left: 0;
+  background-position: center;
 }
 
 .animate_flowers_content_left img,
@@ -594,7 +653,6 @@ header nav.navbar.navbar.fixed-top {
   bottom: 0;
   background: #2b5551cf;
   z-index: 0;
-  height: 100%;
 }
 
 .save_date_section:before {
@@ -637,6 +695,279 @@ div#countdown ul li span {
 }
 
 /*=========================== Save date ends ============================*/
+
+/*=========================== Wedding details starts ============================*/
+
+.wed_details_sec {
+  overflow: hidden;
+}
+
+.about_single_para.wed_details_adjust {
+  margin-top: 20px;
+}
+
+.wed_details_content {
+  justify-content: center;
+}
+
+.wed_details_content_left_text {
+  background: var(--color-lightgrey);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.wedding-img {
+  height: 100%;
+}
+
+.wed_details_content.first {
+  margin-top: 70px;
+  position: relative;
+}
+
+.wed_details_content_left_text h6 {
+  color: var(--color-green);
+  font-family: "Cinzel Decorative", cursive;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.wed_details_content_left_text p {
+  color: var(--color-pera_lightgrey);
+  margin-bottom: 30px;
+}
+
+.align_wed_details_left {
+  text-align: left;
+  align-items: flex-start;
+}
+
+.wed_details_content.first:before {
+  background-image: url(../images/leafe.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 541px;
+  height: 539px;
+  content: "";
+  position: absolute;
+  top: -130px;
+  left: -185px;
+  z-index: -1;
+}
+
+.wed_details_content.last {
+  position: relative;
+}
+
+.wed_details_content.last:before {
+  background-image: url(../images/leafe.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 541px;
+  height: 539px;
+  content: "";
+  position: absolute;
+  bottom: -130px;
+  right: -120px;
+  z-index: -1;
+}
+
+.wedding-img img {
+  height: 100%;
+  object-fit: cover;
+}
+
+/*=========================== Wedding details ends ============================*/
+
+/*=========================== RSVP starts ============================*/
+
+.form_main {
+  background-color: var(--color-lightgrey);
+  padding: 50px;
+  position: relative;
+  z-index: 1;
+}
+
+.inner_form p {
+  color: var(--color-pera_lightgrey);
+}
+
+.form {
+  width: 100%;
+  height: 50px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 10px;
+  margin-top: 15px;
+}
+
+.celebrate_sec .main_title {
+  margin-bottom: 140px;
+}
+
+body .form-check-input:checked {
+  background-color: var(--color-green);
+  border-color: var(--color-white);
+  outline: none;
+}
+
+.form_attend {
+  font-size: 16px;
+  margin-top: 25px;
+  color: var(--color-green);
+}
+
+.form input {
+  width: 100%;
+  height: 100%;
+  color: var(--color-green);
+  padding-top: 25px;
+  border: none;
+  outline: none;
+  background: var(--color-lightgrey);
+}
+
+.form label {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0px;
+  left: 0%;
+  pointer-events: none;
+  border-bottom: 1px solid var(--color-black);
+}
+
+.form label::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-bottom: 3px solid var(--color-green);
+  bottom: -1px;
+  left: 0px;
+  transform: translateX(-100%);
+  transition: all 0.3s ease;
+}
+
+.content-name {
+  position: absolute;
+  bottom: 5px;
+  left: 0px;
+  transition: all 0.3s ease;
+  color: var(--color-green);
+}
+
+.form input:focus + .label-name .content-name,
+.form input:valid + .label-name .content-name {
+  transform: translateY(-125%);
+  font-size: 14px;
+  color: var(--color-green);
+}
+
+.form input:focus + .label-name::after,
+.form input:valid + .label-name::after {
+  transform: translateX(0%);
+}
+
+.rsvp_sec:before {
+  background-image: url(../images/leafe_leftroatated.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 40%;
+  height: 100%;
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) translateX(10px);
+  left: 0;
+  z-index: 0;
+  background-position: 30% 30%;
+}
+
+.rsvp_sec:after {
+  background-image: url(../images/leafe_rightroatated.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) translateX(-10px);
+  right: 0;
+  z-index: 0;
+  width: 30%;
+  height: 60%;
+  background-position: 30% 60%;
+}
+
+body .form-check-input:focus {
+  box-shadow: none;
+}
+
+/*=========================== RSVP ends ============================*/
+
+/*=========================== Will you attend starts ============================*/
+
+.attendance_sec h2 {
+  font-family: "Cinzel Decorative", cursive;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.attendance_sec h6 {
+  font-family: "Cinzel Decorative", cursive;
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 1;
+  color: var(--color-blackgrey);
+  font-weight: 600;
+}
+
+.attendance_sec button {
+  min-width: 200px;
+  font-weight: 400;
+}
+
+.attendance_sec {
+  padding: 235px 0;
+}
+
+.attendance_sec:before {
+  background-image: url(../images/attendance_left.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 40%;
+  height: 100%;
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) translateX(10px);
+  left: -10px;
+  z-index: 0;
+  background-position: 30% 30%;
+  background-position: left;
+}
+
+.attendance_sec:after {
+  background-image: url(../images/attendance_right.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 40%;
+  height: 100%;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+  background-position: 30% 30%;
+  background-position: right;
+}
+
+/*=========================== Will you attend ends ============================*/
 
 /*=========================== Footer starts ============================*/
 
@@ -691,6 +1022,34 @@ div#countdown ul li span {
 
 .footer_main {
   position: relative;
+}
+
+.footer_main:after {
+  content: "";
+  background-image: url(../images/footer_right_design.svg);
+  width: 210px;
+  height: 270px;
+  background-size: contain;
+  background-position: left;
+  position: absolute;
+  left: 80%;
+  top: 50%;
+  transform: translateY(-50%);
+  background-repeat: no-repeat;
+}
+
+.footer_main:before {
+  content: "";
+  background-image: url(../images/footer_left_design.svg);
+  width: 210px;
+  height: 270px;
+  background-size: contain;
+  background-position: right;
+  position: absolute;
+  right: 80%;
+  top: 50%;
+  transform: translateY(-50%);
+  background-repeat: no-repeat;
 }
 
 .footer_main img {
@@ -2393,9 +2752,9 @@ u .roman-width {
   padding-bottom: 30px;
 }
 
-.navbar-brand h5 img {
-  max-width: 45%;
-  width: 100%;
+.navbar-brand img {
+  max-width: 100px;
+  margin-top: 1px;
 }
 
 .landing_banner .landingimg {
@@ -2565,12 +2924,6 @@ u .roman-width {
 
 .other_pages {
   padding-bottom: 30px;
-}
-
-.navbar-brand h5 img {
-  max-width: 100%;
-  width: auto;
-  height: 80px;
 }
 
 .landing-page-logo {
