@@ -37,8 +37,8 @@ div#quad figure:nth-child(4) {
 div#quad figure figcaption {
   margin: 0;
   opacity: 0;
-  background: rgba(0, 0, 0, 0.3);
-  color: #fff;
+  background: #0e1c0f;
+  color: lightslategray;
   padding: 0.3rem;
   font-size: 1.2rem;
   position: absolute;
